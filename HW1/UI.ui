@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1136</width>
+    <height>599</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="file_button1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load Image 1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="file_button2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load Image 2</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>70</y>
+      <width>301</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="process_btn1">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>50</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>1.1 Color Separation</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="process_btn2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>120</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>1.2 Color Transformation</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="process_btn3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>190</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>1.3 Color Detection</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="process_btn4">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>260</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>1.4 Blending</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>50</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1. Image Processing</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>50</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2. Image Smoothing</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>70</y>
+      <width>321</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="smooth_btn1">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>2.1 Guassian Blur</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="smooth_btn2">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>110</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>2.2 Bilateral filter</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="smooth_btn3">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>180</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>2.3 Median filter</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="show_file1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>391</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="show_file2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>310</y>
+      <width>391</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1136</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
