@@ -38,7 +38,7 @@ class MainWindow_controller(QtWidgets.QMainWindow):
         filename, filetype = QFileDialog.getOpenFileName(self,
                                                          "Open file",
                                                          "./")
-        print(filename)
+        # print(filename)
         self.global_image1 = filename
         # self.ui.show_file_path1.setText(filename)
         self.ui.show_file1.setText(filename)
@@ -47,7 +47,7 @@ class MainWindow_controller(QtWidgets.QMainWindow):
         filename, filetype = QFileDialog.getOpenFileName(self,
                                                          "Open file",
                                                          "./")
-        print(filename)
+        # print(filename)
         self.global_image2 = filename
         # self.ui.show_file_path2.setText(filename)
         self.ui.show_file2.setText(filename)
@@ -173,8 +173,15 @@ class MainWindow_controller(QtWidgets.QMainWindow):
         image = np.zeros((1000, 1000, 3), np.uint8)
         cv2.namedWindow('image')
         cv2.createTrackbar('Blend', 'image', 0, 255, self.nothing)
-        image1 = cv2.resize(image1, (256, 256), interpolation=cv2.INTER_AREA)
-        image2 = cv2.resize(image2, (256, 256), interpolation=cv2.INTER_AREA)
+        image1_rows, image1_cols, _ = image1.shape
+        image2_rows, image2_cols, _ = image2.shape
+
+        # if same pixels resize
+        if image1_rows != image2_rows or image1_cols != image2_cols:
+            image1 = cv2.resize(image1, (256, 256),
+                                interpolation=cv2.INTER_AREA)
+            image2 = cv2.resize(image2, (256, 256),
+                                interpolation=cv2.INTER_AREA)
 
         while (1):
             k = cv2.waitKey(1) & 0xFF
